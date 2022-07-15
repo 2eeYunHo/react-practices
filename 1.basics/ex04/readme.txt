@@ -11,10 +11,12 @@ ex04: 애플리케이션 번들링(webpack)
     5) 번들링은
 5. js 모듈 뿐만 아니라 다양한 에셋(images, css, sass/scss, font)들로 모듈로 취급한다.
 6. 설치
-[ex04]$ npm i -D webpack webpack-cli webpack-dev-server style-loader css-loader node-sass sass-loader
+    [ex04]$ npm i -D webpack webpack-cli webpack-dev-server style-loader css-loader node-sass sass-loader
 7. 설치 확인
-[ex04]$ npx webpack --version
+    [ex04]$ npx webpack --version
 8. webpack 설정(webpack.confing.js)
 9. 스크립트팅(package.json)
 10. 애플리케이션 실행(테스트 서버 실행)
     [ex04]$ npm start
+11. 빌드(번들링)
+    [ex04]$ npm run build
