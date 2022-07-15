@@ -1,16 +1,22 @@
-ex01 : Property(props)
-props(property)
-    1) Component의 Data
-    2) 부모에서 자식으로 전달
-        - Component Communication(컴포넌트간의 통신), Data Flow
-        - TOP => Down
-    3) 자식 컴포넌트에서 변경 불가
-    4) 부모가 소유하는 데이터
+ex02 : Component Styling
 
-src/01. : FoodList : 클래스 컴포넌트
-src/02. : FoodList : Data Flow(Top -> Down) : 클래스 컴포넌트
-src/03. : FoodList : Data Flow(Top -> Down) : 함수 컴포넌트
-src/04. : Validation
+1) Inline Styling : src/01
+
+2) Normal CSS
+    - css-loader options: {module: false}
+    - [ex02]$ npm run debug src=02 css-module=false
+
+3) CSS Module I
+    - css-loader options: {module: true}
+    - [ex03]$ npm run debug src=03 (css-module=true)
+
+4) CSS Module II
+    - css-loader options: {module: true}
+    - [ex04]$ npm run debug src=04 (css-module=true)
+    
+5)
+6)
+7)
 
 
 

@@ -4,7 +4,6 @@ import FoodListItem from './FoodListItem';
 class FoodList extends Component {
 
     render() {
-        const foods = [{name:'', q:10}, {}, {}, {}];
         return (
             <div>
                 <ul>
