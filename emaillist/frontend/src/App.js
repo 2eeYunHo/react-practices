@@ -1,5 +1,6 @@
 import React from 'react';
-import emails from './assets/json/data.json';
+import emails from './assets/css/App.css';
+
 function App() {
     return (
         <div id='App'>                
