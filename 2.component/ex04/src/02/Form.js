@@ -4,14 +4,21 @@ import './assets/Form.css';
 export default function Form() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
+    const [validEmail, setValidEmail] = useState(false);
 
     const onChangeNameInput = e => {
-        setName(e.target.value);
+        // setName(e.target.value);
         // 10글자 제한
         setName(e.target.value.substr(0,10));
     }
     const onChangeEmailInput = e => {
-        setEmail(e.target.value.substr(0,20));
+        setEmail(e.target.value);
+        // check eamil format(acount@mysite.com) .substr(0,20)
+        // exist api
+
+        const re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
+        setValidEmail(re.test(e.target.value));
+        
     }
 
     return (
@@ -24,8 +31,11 @@ export default function Form() {
                    onChange={onChangeNameInput} />
 
             <label htmlFor="email">이메일</label>
-            <input id="email" name="email" type="text" value={ email }
-            onChange = {onChangeEmailInput}/>
+            <input id="email" 
+                   name="email" 
+                   ype="text" 
+                   value={ email }
+                   onChange = {onChangeEmailInput}/>{ validEmail ? "ok" : "no" }
 
             <label htmlFor="password">패스워드</label>
             <input id="password" name="password" type="password" value={ "" } />
