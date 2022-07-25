@@ -2,21 +2,20 @@ import React, {useState} from 'react';
 import TaskList from './TaskList'
 import styles from './assets/scss/Card.scss';
 
-export default function Card({no, title, description,status, tasks}) {
+export default function Card({title, description,status, tasks}) {
     const [show_detail, setShowSetdetail] = useState(true);
     const onChangeagreeProvInput = e => {
         setShowSetdetail(!show_detail)  
-      const styleSideColor={
-          position: 'absolute',
-          zIndex:-1,
-          top:0,
-          left:0,
-          bottom: 0,
-          width: 3,
-          backgrounColor: status === 'Todo' ? '#bd8D31' : (status ==='Doing' ? '#3a7e28' : '#222')
-        }
     }
-   
+    const styleSideColor={
+      position: 'absolute',
+      zIndex:-1,
+      top:0,
+      left:0,
+      bottom: 0,
+      width: 3,
+      backgroundColor: status === 'ToDo' ? '#bd8D31' : (status ==='Doing' ? '#3a7e28' : '#222')
+    }
     return (
         <div className={styles.Card}>
           <div style={styleSideColor}/>
@@ -32,5 +31,3 @@ export default function Card({no, title, description,status, tasks}) {
         </div>
     );
 }
-
-export default Card;  
