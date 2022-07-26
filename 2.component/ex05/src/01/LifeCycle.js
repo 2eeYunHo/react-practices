@@ -65,10 +65,9 @@ export default class LifeCircle extends Component {
         console.log(`[UPDATE05]: componentDidUpdate(prevProps=${prevProps.color}, prevState=${prevState.color}, snapshot=${hexColor})`);
     }
 
-    /**
-
-    
-     */
+    /*
+    *   
+    */
     componentDidMount() {
         console.log('[MOUNT04]: componentDidMount()');
     }
