@@ -2,6 +2,7 @@ import React from 'react';
 import cards from './assets/json/data.json'
 import CardList from './CardList';
 import styles from './assets/css/KanbanBoard.css';
+
 function KanbanBoard() {
     console.log(cards);
 
